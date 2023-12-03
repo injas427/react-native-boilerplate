@@ -5,22 +5,20 @@
  * @format
  */
 
+import 'react-native-gesture-handler';
+
 import React from 'react';
-import {
-  SafeAreaView,
-  StatusBar,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {AppNavigator} from './src/AppNavigator';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    flex: 1,
   };
 
   return (
@@ -29,9 +27,7 @@ function App(): JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <View>
-        <Text>From Template</Text>
-      </View>
+      <AppNavigator />
     </SafeAreaView>
   );
 }
