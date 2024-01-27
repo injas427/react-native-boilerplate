@@ -9,8 +9,8 @@ import 'react-native-gesture-handler';
 
 import React from 'react';
 import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
-
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+
 import {AppNavigator} from './src/AppNavigator';
 
 function App(): JSX.Element {
