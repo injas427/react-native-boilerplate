@@ -2,16 +2,13 @@
   "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
     "target": "esnext",
-    "module": "commonjs",
+    "module": "Node16",
     "allowJs": true,
     "jsx": "react-native",
     "strict": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Node16",
     "baseUrl": "./",
     "paths": {
-      "@src/*": [
-        "src/*"
-      ],
       "@screens": [
         "src/screens"
       ],
