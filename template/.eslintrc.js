@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   extends: ['@react-native', 'plugin:jest/recommended'],
-  plugins: ['import'],
+  plugins: ['import', 'unused-imports'],
   rules: {
     'import/order': [
       'error',
@@ -69,5 +69,48 @@ module.exports = {
       },
     ],
     'import/named': 'error',
+    'no-unused-vars': 'off', // or "@typescript-eslint/no-unused-vars": "off",
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'warn',
+      {
+        'vars': 'all',
+        'varsIgnorePattern': '^_',
+        'args': 'after-used',
+        'argsIgnorePattern': '^_',
+      },
+    ],
+    'import/newline-after-import': ['error', { 'count': 1, exactCount: true }],
+    'no-duplicate-imports': 'error',
+    'sort-imports':
+      [
+        'error',
+        {
+          'ignoreCase': true,
+          'ignoreDeclarationSort': true,
+        },
+      ],
+    'curly': ['error', 'all'],
+    eqeqeq: ['error', 'always'],
+    'func-style': ['error', 'expression', { 'allowArrowFunctions': true }],
+    'no-console': 'warn',
+    'no-else-return': ['error'],
+    'no-empty': 'error',
+    'no-empty-function': 'error',
+    'no-magic-numbers': 'warn',
+    'no-nested-ternary': 'error',
+    'no-param-reassign': 'error',
+    'no-redeclare': 'error',
+    'no-unneeded-ternary': 'error',
+    'no-useless-catch': 'error',
+    'no-useless-return': 'error',
+    'no-var': 'error',
+    'prefer-const': 'error',
+    'prefer-destructuring': 'warn',
+    'prefer-object-spread': 'error',
+    'prefer-template': 'error',
+    'radix': ['error'],
+    'require-await': 'error',
+
   },
 };

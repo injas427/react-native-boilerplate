@@ -7,7 +7,6 @@ module.exports = {
         extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
         root: ['.'],
         alias: {
-          '@src': './src',
           '@screens': './src/screens',
           '@constants': './src/constants',
         },
