@@ -8,4 +8,5 @@ updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/template" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "weekly"
+    target-branch: "develop"
