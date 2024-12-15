@@ -28,7 +28,7 @@ jobs:
           makeLatest: true
           name: ${{ github.ref_name }}
           body: ${{ steps.changelog.outputs.changes }}
-          token: ${{ github.token }}
+          token: ${{ secrets.GH_WORKFLOW_CHANGELOG }}
 
       - name: Commit CHANGELOG.md
         uses: stefanzweifel/git-auto-commit-action@v4
